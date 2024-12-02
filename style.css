@@ -2,12 +2,18 @@
 .goodnotes {
     width: 300px;
     /* height: 169px; */
-    animation-name: dvd;
+    animation: 20s linear infinite normal dvd, 20s steps(1, end) infinite normal dvdbackground2;
+    /* animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear; */
+    position: absolute;
+    border-radius: 50px;
+    /* animation-name: dvdbackground2;
     animation-duration: 20s;
     animation-iteration-count: infinite;
     animation-direction: normal;
-    position: absolute;
-    border-radius: 50px;
+    animation-timing-function: steps(1, end); */
 
     /* bottom: 50%;
     left: 80%; */
@@ -21,8 +27,8 @@
         top: 0; */
         /* transform: translate(0, 0) scale(1);  */
         transform: translate(0, 100%) scale(1); 
-        content:url("./GDN-Combination-Mark-White-CMYK.svg");
-        background-color: #1F233E;
+        /* content:url("./GDN-Combination-Mark-White-CMYK.svg");
+        background-color: #1F233E; */
     }
     25% {
         /* position: absolute;
@@ -30,8 +36,8 @@
         left: 70%; */
         /* transform: translate(350%, 400%) scale(1.5); */
         transform: translate(350%, 900%) scale(1.5);
-        content:url("./GDN-Primary-Combination-Mark-Black-CMYK.png");
-        background-color: #E6E5E4;
+        /* content:url("./GDN-Primary-Combination-Mark-Black-CMYK.png");
+        background-color: #E6E5E4; */
     }
     50% {
         /* position: absolute;
@@ -39,8 +45,8 @@
         left: 40%; */
         /* transform: translate(200%, 0%) scale(1); */
         transform: translate(200%, 0%) scale(1);
-        content:url("./GDN-Combination-Mark-White-CMYK.svg");
-        background-color: #1F233E;
+        /* content:url("./GDN-Combination-Mark-White-CMYK.svg");
+        background-color: #1F233E; */
     }
     75% {
         /* position: absolute;
@@ -48,8 +54,8 @@
         left: 10%; */
         /* transform: translate(30%, 400%) scale(1.5); */
         transform: translate(30%, 900%) scale(1.5);
-        content:url("./GDN-Primary-Combination-Mark-Black-CMYK.png");
-        background-color: #E6E5E4;
+        /* content:url("./GDN-Primary-Combination-Mark-Black-CMYK.png");
+        background-color: #E6E5E4; */
     }
     90% {
         /* position: absolute;
@@ -57,17 +63,17 @@
         left: 80%; */
         /* transform: translate(400%, 200%) scale(1); */
         transform: translate(400%, 400%) scale(1);
-        content:url("./GDN-Combination-Mark-White-CMYK.svg");
-        background-color: #1F233E;
+        /* content:url("./GDN-Combination-Mark-White-CMYK.svg");
+        background-color: #1F233E; */
     }
     100% {
         /* transform: translate(0, 0) scale(1);  */
         transform: translate(0, 100%) scale(1); 
-        content:url("./GDN-Primary-Combination-Mark-Black-CMYK.png");
-        background-color: #E6E5E4;
+        /* content:url("./GDN-Primary-Combination-Mark-Black-CMYK.png");
+        background-color: #E6E5E4; */
     }
 }
-
+/* 
 @keyframes dvdbackground {
     0% {
         background-color: #E6E5E4;
@@ -87,18 +93,76 @@
     100% {
         background-color: #1F233E;
     }
+} */
+
+@keyframes dvdbackground {
+    0% {
+        background-color: #ff99c8;
+    }
+    25% {
+        background-color: #fcf6bd;
+    }
+    50% {
+        background-color: #d0f4de;
+    }
+    75% {
+        background-color: #a9def9;
+    }
+    90% {
+        background-color: #e4c1f9;
+    }
+    100% {
+        background-color: #ffb4a2;
+    }
 }
 
+@keyframes dvdbackground2 {
+    0% {
+        content:url("./GDN-Combination-Mark-White-CMYK.svg");
+        background-color: #1F233E;
+    }
+    25% {
+        content:url("./GDN-Primary-Combination-Mark-Black-CMYK.png");
+        background-color: #E6E5E4;
+    }
+    50% {
+        content:url("./GDN-Combination-Mark-White-CMYK.svg");
+        background-color: #1F233E;
+    }
+    75% {
+        content:url("./GDN-Primary-Combination-Mark-Black-CMYK.png");
+        background-color: #E6E5E4;
+    }
+    90% {
+        content:url("./GDN-Combination-Mark-White-CMYK.svg");
+        background-color: #1F233E;
+    }
+    100% {
+        content:url("./GDN-Primary-Combination-Mark-Black-CMYK.png");
+        background-color: #E6E5E4;
+    }
+}
 
 body {
     animation-name: dvdbackground;
     animation-duration: 20s;
     animation-iteration-count: infinite;
     animation-direction: normal;
+    animation-timing-function: steps(1, end);
+
+    /* outline-offset: 5px; */
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100lvh;
+
+    /* outline-color: #45C0DB;
+    outline-style: inset;
+    outline-width: 20px;
+    outline-offset: -20px; */
 }
 
 .container {
     width: 100%;
     height: 100%;
-
 }
